@@ -6,9 +6,11 @@ Created on Thu Jul  8 07:40:51 2021
 """
 
 import subprocess as cmd
+import time
 
-
-cp = cmd.run("git add .", check=True, shell = True)
-cmd.run("git commit -m AutoUpdate", check=True, shell = True)
-cmd.run("git push -u origin main", check=True, shell = True)
-cmd.run("cd ..", check=True, shell = True)
+while True:
+	time.sleep(600)
+	cp = cmd.run("git add .", check=True, shell = True)
+	cmd.run("git commit -m AutoUpdate", check=True, shell = True)
+	cmd.run("git push -u origin main", check=True, shell = True)
+	cmd.run("cd ..", check=True, shell = True)
