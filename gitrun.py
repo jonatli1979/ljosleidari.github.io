@@ -7,8 +7,10 @@ Created on Thu Jul  8 07:40:51 2021
 
 import subprocess as cmd
 import time
+from datetime import datetime
 
 while True:
+    print('Last start of process',datetime.now())
     try:
         cp = cmd.run("git add .", check=True, shell = True)
         cmd.run("git commit -m AutoUpdate", check=True, shell = True)
