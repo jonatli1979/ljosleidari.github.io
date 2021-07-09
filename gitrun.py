@@ -18,4 +18,4 @@ while True:
         cmd.run("cd ..", check=True, shell = True)
     except:
         continue
-    time.sleep(600)
+    time.sleep(120)
