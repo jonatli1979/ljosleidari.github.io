@@ -9,8 +9,11 @@ import subprocess as cmd
 import time
 
 while True:
-	time.sleep(600)
-	cp = cmd.run("git add .", check=True, shell = True)
-	cmd.run("git commit -m AutoUpdate", check=True, shell = True)
-	cmd.run("git push -u origin main", check=True, shell = True)
-	cmd.run("cd ..", check=True, shell = True)
+    try:
+        cp = cmd.run("git add .", check=True, shell = True)
+        cmd.run("git commit -m AutoUpdate", check=True, shell = True)
+        cmd.run("git push -u origin main", check=True, shell = True)
+        cmd.run("cd ..", check=True, shell = True)
+    except:
+        continue
+    time.sleep(600)
