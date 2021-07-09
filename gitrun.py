@@ -10,6 +10,7 @@ import time
 from datetime import datetime
 
 while True:
+    time.sleep(300)
     print('Last start of process',datetime.now())
     try:
         cp = cmd.run("git add .", check=True, shell = True)
@@ -18,4 +19,4 @@ while True:
         cmd.run("cd ..", check=True, shell = True)
     except:
         continue
-    time.sleep(120)
+    
