@@ -9,14 +9,13 @@ import subprocess as cmd
 import time
 from datetime import datetime
 
-while True:
+
    
-    print('Last start of process',datetime.now())
-    try:
-        cp = cmd.run("git add .", check=True, shell = True)
-        cmd.run("git commit -m AutoUpdate", check=True, shell = True)
-        cmd.run("git push -u origin main", check=True, shell = True)
-        cmd.run("cd ..", check=True, shell = True)
-    except:
-        continue
-    
+print('Last start of process',datetime.now())
+try:
+    cp = cmd.run("git add .", check=True, shell = True)
+    cmd.run("git commit -m AutoUpdate", check=True, shell = True)
+    cmd.run("git push -u origin main", check=True, shell = True)
+    cmd.run("cd ..", check=True, shell = True)
+except:
+   print('error')
