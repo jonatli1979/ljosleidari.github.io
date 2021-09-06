@@ -17,8 +17,14 @@
   </body>
 
 
-<model-viewer src="buri.glb" poster="poster.webp" camera-controls>
-
+<model-viewer src="buri.glb" poster="poster.webp" camera-controls environment-image="spruit_sunrise_1k_HDR.hdr" exposure="1" shadow-intensity="0" shadow-softness="1">
+    <button class="Hotspot" slot="hotspot-2" data-position="16.87264255983622m -23.144069990408802m 10.922849751771992m" data-normal="-0.8137793242952559m -0.11530467882521234m 0.5696209637913366m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Botn á svelg</div>
+    </button><button class="Hotspot" slot="hotspot-3" data-position="-0.6845689437706781m -33.79898733655213m -19.667138537306982m" data-normal="-0.8320201036968585m 0.5547454795167498m 0m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Núverandi endi</div>
+    </button><button class="Hotspot" slot="hotspot-4" data-position="-2.6009664248589353m -36.05943740083839m 4.170176072957489m" data-normal="-0.20885668024643825m 0.933208593917472m 0.2924048688975821m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Upprunalegur veggur og gólf</div>
+    </button>
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
     </div>
@@ -26,4 +32,9 @@
         View in your space
     </button>
     <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
+
+
 </html>
