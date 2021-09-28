@@ -17,7 +17,7 @@ from datetime import datetime
 
 #@st.cache(allow_output_mutation=True, hash_funcs={"_thread.RLock": lambda _: None})
 def init_connection():
-    return psycopg2.connect(database = "Natthagi", user="jonatli",password="CallMore",host="192.168.1.167",port="5432")
+    return psycopg2.connect(database = "Natthagi", user=st.secrets.db_credentials.username, password=st.secrets.db_credentials.password,host="192.168.1.167",port="5432")
 conn = init_connection()
 
 
